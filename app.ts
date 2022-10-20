@@ -13,9 +13,12 @@ function add(n1:number,n2:number,showresult:boolean) {
     
     
 }
-const number1=5;
-const number2=9.5;
+const number1:number=5;
+const number2:number=9.5;
 const printresult=true;
+
 //const result= add(number1, number2,printresult);
 add(number1, number2,printresult);
 //console.log(result);
+
+//Object type
