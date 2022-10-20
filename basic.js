@@ -17,8 +17,11 @@ var persion1 = {
 var person = {
     name: 'siddhart',
     age: 21,
-    hobbies: ['spots', 'Cooking']
+    hobbies: ['spots', 'Cooking'],
+    role: [2, 'author']
 };
+person.role.push('admin');
+person.role[1] = 10;
 var favoriteActivity;
 favoriteActivity = ['spots'];
 for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
@@ -26,3 +29,12 @@ for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
     console.log(hobbies.toUpperCase());
 }
 console.log(person);
+//Working with Tuples
+var person1 = {
+    name: 'siddhart',
+    age: 21,
+    hobbies: ['spots', 'Cooking'],
+    role: [2, 'author']
+};
+person1.role.push('admin');
+//person1.role[1]=10;
