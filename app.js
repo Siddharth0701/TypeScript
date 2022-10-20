@@ -14,3 +14,4 @@ var printresult = true;
 //const result= add(number1, number2,printresult);
 add(number1, number2, printresult);
 //console.log(result);
+//Object type
