@@ -54,3 +54,27 @@ const person1:{
 };
 person1.role.push('admin');
 //person1.role[1]=10;
+
+
+//Working with Enum
+
+// const admin =0;
+// const read_only=1;
+// const author=2;
+enum Role{
+admin,read_only,author
+};
+
+
+const per={
+    name:'siddharth',
+    age:21,
+    hobbies:['spots','cooking'],
+    role:Role.admin
+}
+
+if(per.role === Role.admin){
+    console.log('is admin');
+    
+
+}
