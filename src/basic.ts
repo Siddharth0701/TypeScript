@@ -17,10 +17,7 @@ console.log(persion);
 
 
 
-const persion1={
-    name:'Singh',
-    age:21
-};
+
 
 //Array
 const person={

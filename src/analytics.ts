@@ -1,7 +1,7 @@
 console.log('Sending data....');// tsc --init, tsc -w
 
-let age;
-age=21;
+let aage;
+aage=21;
 console.log(age);
 
 const button1= document.querySelector('button') !;
