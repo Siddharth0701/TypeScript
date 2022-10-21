@@ -21,4 +21,11 @@ const printresult=true;
 add(number1, number2,printresult);
 //console.log(result);
 
-//Object type
+//Module run watch run
+const user="Siddharth Singh"; //tsc app.ts --watch
+console.log(user);
+const a:number=10;
+console.log(a);
+
+
+

@@ -14,4 +14,8 @@ var printresult = true;
 //const result= add(number1, number2,printresult);
 add(number1, number2, printresult);
 //console.log(result);
-//Object type
+//Module run watch run
+var user = "Siddharth Singh"; //tsc app.ts --watch
+console.log(user);
+var a = 10;
+console.log(a);
