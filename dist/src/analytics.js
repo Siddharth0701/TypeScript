@@ -13,4 +13,3 @@ function sendAnalysic(data) {
     logged = true;
 }
 sendAnalysic('the data');
-//# sourceMappingURL=analytics.js.map

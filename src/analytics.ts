@@ -9,5 +9,15 @@ button?.addEventListener( 'click',()=>{
     console.log('Clicked!');
     
 });
+let logged;
+
+function sendAnalysic(data:string) {
+    console.log(data);
+    logged=true
+    
+
+    
+}
+sendAnalysic('the data');
 
 
