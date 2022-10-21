@@ -1,5 +1,6 @@
+"use strict";
 function combine(input1, input2, resultConversion) {
-    var result;
+    let result;
     if (typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === 'as-number') {
         result = +input1 + +input2;
     }
@@ -15,9 +16,9 @@ function combine(input1, input2, resultConversion) {
     //     return result.toString();
     //  }
 }
-var combinedAges = combine(30, 20, 'as-number');
+const combinedAges = combine(30, 20, 'as-number');
 console.log(combinedAges);
-var combinedStringAges = combine('30', '25', 'as-number');
+const combinedStringAges = combine('30', '25', 'as-number');
 console.log(combinedStringAges);
-var combinedName = combine('Max', 'Anna', 'astext');
+const combinedName = combine('Max', 'Anna', 'astext');
 console.log(combinedName);

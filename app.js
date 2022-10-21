@@ -1,3 +1,4 @@
+"use strict";
 console.log("Hello Siddharth Singh");
 function add(n1, n2, showresult) {
     console.log(typeof number1);
@@ -8,14 +9,14 @@ function add(n1, n2, showresult) {
         return n1 + n2;
     }
 }
-var number1 = 5;
-var number2 = 9.5;
-var printresult = true;
+const number1 = 5;
+const number2 = 9.5;
+const printresult = true;
 //const result= add(number1, number2,printresult);
 add(number1, number2, printresult);
 //console.log(result);
 //Module run watch run
-var user = "Siddharth Singh"; //tsc app.ts --watch
+const user = "Siddharth Singh"; //tsc app.ts --watch
 console.log(user);
-var a = 10;
+const a = 10;
 console.log(a);

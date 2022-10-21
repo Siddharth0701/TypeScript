@@ -1,20 +1,21 @@
+"use strict";
 // //Object types
 // const persion={
 //     name:'siddhart',
 //     age:21
 // };
 // console.log(persion.name);
-var persion = {
+const persion = {
     name: 'Siddharth Singh',
     age: 21
 };
 console.log(persion);
-var persion1 = {
+const persion1 = {
     name: 'Singh',
     age: 21
 };
 //Array
-var person = {
+const person = {
     name: 'siddhart',
     age: 21,
     hobbies: ['spots', 'Cooking'],
@@ -22,15 +23,14 @@ var person = {
 };
 person.role.push('admin');
 person.role[1] = 10;
-var favoriteActivity;
+let favoriteActivity;
 favoriteActivity = ['spots'];
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobbies = _a[_i];
+for (const hobbies of person.hobbies) {
     console.log(hobbies.toUpperCase());
 }
 console.log(person);
 //Working with Tuples
-var person1 = {
+const person1 = {
     name: 'siddhart',
     age: 21,
     hobbies: ['spots', 'Cooking'],
@@ -49,7 +49,7 @@ var Role;
     Role[Role["author"] = 2] = "author";
 })(Role || (Role = {}));
 ;
-var per = {
+const per = {
     name: 'siddharth',
     age: 21,
     hobbies: ['spots', 'cooking'],

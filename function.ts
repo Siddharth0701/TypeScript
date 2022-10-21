@@ -1,4 +1,4 @@
-function add(n1:number, n2:number) {
+function add12(n1:number, n2:number) {
     return n1+n2;
     
 }
@@ -13,10 +13,10 @@ function addAndHandle(n1:number,n2:number,cb:(num:number)=>void) {
     cb(result);
     
 }
-printResult(add(10,20));
+printResult(add12(10,20));
 //let combinedvalue:Function;
 let combinedvalue:(a:number,b:number)=> number;
-combinedvalue    =add;
+combinedvalue    =add12;
 //combinedvalue=printResult;
 //combinedvalue=5;
 
