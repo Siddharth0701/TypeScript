@@ -2,13 +2,13 @@
 const username='Siddharth Singh';
 let ages=10;
 ages=21;
-function add(a:number,b:number) {
+function addition(a:number,b:number) {
     let result;
     result=a+b;
     return result;
     
 }
-  console.log(add(10,20));
+  console.log(addition(10,20));
    
 //console.log(result);
 // if(ages>20){
