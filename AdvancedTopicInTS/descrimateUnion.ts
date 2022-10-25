@@ -39,3 +39,13 @@ if (userInputElement){
     (userInputElement as HTMLInputElement).value= 'Hi there!';
 }
 
+//Index property
+interface ErrorContainer{   //{email:'Not a valid email', username:'Must start with a character!'}
+   // id:string;
+    [prop:string]:string;
+
+}
+const errorBug:ErrorContainer={
+email:'Not a valid email',
+username:'Must start with a capital character!'
+};

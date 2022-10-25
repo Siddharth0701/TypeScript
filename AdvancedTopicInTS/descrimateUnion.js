@@ -22,3 +22,7 @@ const userInputElement = document.getElementById('user-input');
 if (userInputElement) {
     userInputElement.value = 'Hi there!';
 }
+const errorBug = {
+    email: 'Not a valid email',
+    username: 'Must start with a capital character!'
+};
