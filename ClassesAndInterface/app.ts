@@ -14,7 +14,8 @@ return n1+n2;
 
 
 interface Named{
-    readonly name: string
+    readonly name?: string;
+    outputname?:string;
 }
 
 interface Greetable extends Named{
@@ -23,15 +24,27 @@ interface Greetable extends Named{
     greet(phrase:string):void;
 }
 class Person implements Greetable,Named{
-    name: string;
+    name?: string;
     age=21;
+   // outputName='....'
 
-    constructor( n:string) {
-        this.name=n;
+    constructor( n?:string) {
+        if(n){
+            this.name=n;
+        }
+       
         
     }
     greet(phrase: string) {
-        
+        if(this.name){
+            console.log(phrase +''+ this.name);
+            
+        }
+        else{
+            console.log("Hi!");
+            
+        }
+
     }
 
 
