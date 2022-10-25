@@ -9,6 +9,7 @@ class Person {
 }
 let user1;
 user1 = new Person('Siddharth');
+//user1.name='Manu';
 //{
 //     name:'Siddharth',
 //     //age:21,

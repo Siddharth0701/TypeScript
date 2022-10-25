@@ -1,5 +1,5 @@
 interface Greetable{
-    name:string;
+    readonly name:string;
     // age:number;
     greet(phrase:string):void;
 }
@@ -19,6 +19,7 @@ class Person implements Greetable{
 }
 let user1:Greetable;
 user1= new Person('Siddharth');
+//user1.name='Manu';
 //{
 //     name:'Siddharth',
 //     //age:21,
