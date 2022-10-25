@@ -1,7 +1,7 @@
 class DepartmentIT{
     // private id:string;
     // private name:string;
-    private employees:string[]=[];
+    protected employees:string[]=[];
      constructor( public name:string, private readonly id:string){
          //this.name=na;
          //this.id=id;
@@ -38,6 +38,13 @@ class DepartmentIT{
         super(id,'IT');
     
     }
+    addEmp(name:string){
+        if(name === 'Singh'){
+          return;  
+        }
+        this.employees.push(name)
+
+    }
     addReport(text:string){
         this.report.push(text);
     }
@@ -58,6 +65,9 @@ class DepartmentIT{
    console.log(account);
    const accounti=new AccountingDepartment('d2',[]);
    accounti.addReport('Something went wrong...');
+   accounti.addEmp('Singham');
+   accounti.addEmp('Singh');
+   accounti.printEmployeeInformation();
    accounti.getReport();
    
    //accounting1.printEmployeeInformation();
