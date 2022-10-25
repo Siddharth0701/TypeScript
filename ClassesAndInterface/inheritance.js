@@ -1,13 +1,17 @@
 "use strict";
 class DepartmentIT {
     constructor(name, id) {
-        //this.name=na;
-        //this.id=id;
         this.name = name;
         this.id = id;
         // private id:string;
         // private name:string;
         this.employees = [];
+        //this.name=na;
+        //this.id=id;
+        console.log(DepartmentIT.fiscalYear);
+    }
+    static createEmployee(name) {
+        return { name: name };
     }
     describe() {
         console.log(`Department(${this.name}):${this.id}`);
@@ -21,6 +25,7 @@ class DepartmentIT {
         console.log(this.employees);
     }
 }
+DepartmentIT.fiscalYear = 2022;
 class ITDepartment extends DepartmentIT {
     constructor(id, admin) {
         super(id, 'it');
@@ -59,6 +64,8 @@ class AccountingDepartment extends DepartmentIT {
         console.log(this.report);
     }
 }
+const employee1 = DepartmentIT.createEmployee('Singh');
+console.log(employee1, DepartmentIT.fiscalYear);
 const account = new ITDepartment('D1', ['Max']);
 //
 const accountingit = new DepartmentIT('D1', 'Singh');

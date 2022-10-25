@@ -1,11 +1,18 @@
 class DepartmentIT{
+     static fiscalYear=2022;
     // private id:string;
     // private name:string;
     protected employees:string[]=[];
      constructor( public name:string, private readonly id:string){
          //this.name=na;
          //this.id=id;
+         console.log(DepartmentIT.fiscalYear);
+         
  
+     }
+      static createEmployee(name:string){
+        return {name:name};
+
      }
      describe( this:DepartmentIT) {
          console.log(`Department(${this.name}):${this.id}`);
@@ -73,10 +80,16 @@ class DepartmentIT{
     }
 
  }
+
+ const employee1= DepartmentIT.createEmployee('Singh');
+ console.log(employee1, DepartmentIT.fiscalYear);
+ 
  const account=new ITDepartment('D1',['Max'])
+ 
    //
 
    const accountingit=new DepartmentIT('D1','Singh');
+
    account.addEmployee('SIDDHARTH');
  account.addEmployee('Singh');
  //accounting1.employees[2]='Mohan';
