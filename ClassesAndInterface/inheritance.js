@@ -50,6 +50,13 @@ class AccountingDepartment extends DepartmentIT {
         }
         this.addReport(value);
     }
+    static getInstance() {
+        if (AccountingDepartment.instance) {
+            return this.instance;
+        }
+        this.instance = new AccountingDepartment('d2', []);
+        return this.instance;
+    }
     addEmp(name) {
         if (name === 'Singh') {
             return;
@@ -77,7 +84,10 @@ account.addEmployee('Singh');
 //accounting1.employees[2]='Mohan';
 account.describe();
 console.log(account);
-const accounti = new AccountingDepartment('d2', []);
+// const accounti=new AccountingDepartment('d2',[]);
+const accounti = AccountingDepartment.getInstance();
+const accounti2 = AccountingDepartment.getInstance();
+console.log(accounti, accounti2);
 accounti.mostrecentReport = 'Year end report';
 accounti.addReport('Something went wrong...');
 console.log(accounti.mostrecentReport);

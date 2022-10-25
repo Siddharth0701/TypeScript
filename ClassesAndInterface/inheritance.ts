@@ -45,6 +45,7 @@ abstract class DepartmentIT{
  }
  class AccountingDepartment extends DepartmentIT{
     private lastReport:string;
+     private static instance: AccountingDepartment;
     get mostrecentReport(){
         if(this.lastReport){
             return this.lastReport;
@@ -61,11 +62,18 @@ abstract class DepartmentIT{
     }
 
 
-    constructor( id:string , private report:string[]){
+   private constructor( id:string , private report:string[]){
         super(id,'IT');
         this.lastReport=report[0];
 
     
+    }
+    static getInstance(){
+        if(AccountingDepartment.instance){
+            return this.instance;
+        }
+        this.instance =new AccountingDepartment('d2',[]);
+        return this.instance;
     }
 
     addEmp(name:string){
@@ -106,7 +114,11 @@ abstract class DepartmentIT{
  //accounting1.employees[2]='Mohan';
    account.describe();
    console.log(account);
-   const accounti=new AccountingDepartment('d2',[]);
+  // const accounti=new AccountingDepartment('d2',[]);
+  const accounti =AccountingDepartment.getInstance();
+  const accounti2 =AccountingDepartment.getInstance();
+  console.log(accounti,accounti2);
+  
    accounti.mostrecentReport='Year end report';
   
    
