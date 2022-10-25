@@ -13,9 +13,6 @@ class DepartmentIT {
     static createEmployee(name) {
         return { name: name };
     }
-    describe() {
-        console.log(`Department(${this.name}):${this.id}`);
-    }
     addEmployee(employee) {
         // this.id='d1';
         this.employees.push(employee);
@@ -30,6 +27,9 @@ class ITDepartment extends DepartmentIT {
     constructor(id, admin) {
         super(id, 'it');
         this.admin = admin;
+    }
+    describe() {
+        console.log("IT Department --ID " + this.id);
     }
 }
 class AccountingDepartment extends DepartmentIT {
@@ -56,6 +56,9 @@ class AccountingDepartment extends DepartmentIT {
         }
         this.employees.push(name);
     }
+    describe() {
+        console.log('Accounting departement -ID:' + this.id);
+    }
     addReport(text) {
         this.report.push(text);
         this.lastReport = text;
@@ -68,7 +71,7 @@ const employee1 = DepartmentIT.createEmployee('Singh');
 console.log(employee1, DepartmentIT.fiscalYear);
 const account = new ITDepartment('D1', ['Max']);
 //
-const accountingit = new DepartmentIT('D1', 'Singh');
+//const accountingit=new DepartmentIT('D1','Singh');
 account.addEmployee('SIDDHARTH');
 account.addEmployee('Singh');
 //accounting1.employees[2]='Mohan';
@@ -80,6 +83,7 @@ accounti.addReport('Something went wrong...');
 console.log(accounti.mostrecentReport);
 accounti.addEmp('Singham');
 accounti.addEmp('Singh');
-accounti.printEmployeeInformation();
-accounti.getReport();
+//    accounti.printEmployeeInformation();
+//    accounti.getReport();
+accounti.describe();
 //accounting1.printEmployeeInformation();

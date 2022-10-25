@@ -1,9 +1,9 @@
-class DepartmentIT{
+abstract class DepartmentIT{
      static fiscalYear=2022;
     // private id:string;
     // private name:string;
     protected employees:string[]=[];
-     constructor( public name:string, private readonly id:string){
+     constructor( public name:string, protected readonly id:string){
          //this.name=na;
          //this.id=id;
          console.log(DepartmentIT.fiscalYear);
@@ -14,11 +14,10 @@ class DepartmentIT{
         return {name:name};
 
      }
-     describe( this:DepartmentIT) {
-         console.log(`Department(${this.name}):${this.id}`);
+     abstract describe( this:DepartmentIT): void;
          
  
-     }
+     
      addEmployee( employee:string){
        // this.id='d1';
         this.employees.push(employee); 
@@ -36,6 +35,11 @@ class DepartmentIT{
         this.admin=admin;
 
 
+    }
+    describe() {
+        console.log("IT Department --ID "+this.id);
+        
+        
     }
 
  }
@@ -63,12 +67,19 @@ class DepartmentIT{
 
     
     }
+
     addEmp(name:string){
         if(name === 'Singh'){
           return;  
         }
         this.employees.push(name)
 
+    }
+    describe() {
+        console.log('Accounting departement -ID:'+this.id);
+        
+
+        
     }
     addReport(text:string){
         this.report.push(text);
@@ -88,7 +99,7 @@ class DepartmentIT{
  
    //
 
-   const accountingit=new DepartmentIT('D1','Singh');
+   //const accountingit=new DepartmentIT('D1','Singh');
 
    account.addEmployee('SIDDHARTH');
  account.addEmployee('Singh');
@@ -103,7 +114,9 @@ class DepartmentIT{
    console.log(accounti.mostrecentReport);
    accounti.addEmp('Singham');
    accounti.addEmp('Singh');
-   accounti.printEmployeeInformation();
-   accounti.getReport();
+//    accounti.printEmployeeInformation();
+//    accounti.getReport();
+accounti.describe();
+
    
    //accounting1.printEmployeeInformation();
