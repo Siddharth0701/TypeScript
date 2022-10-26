@@ -18,4 +18,16 @@ function merge(objA, objB) {
 const mergeObj = merge({ name: 'Siddharth', hobbies: ['Sports'] }, { age: 21 }); //as {name:string,age:number}
 const mergeObj2 = merge({ name: 'Siddharth' }, { age: 21 }); //as {name:string,age:number}
 console.log(mergeObj);
-//mergeObj.age;
+function countAndDescribe(element) {
+    let descriptionText = 'Got no value';
+    if (element.length === 1) {
+        descriptionText = 'Got 1 elements.';
+    }
+    else if (element.length > 1) {
+        descriptionText = 'Got' + element.length + 'element';
+    }
+    return [element, descriptionText];
+}
+console.log(countAndDescribe('Hi there!'));
+console.log(countAndDescribe(['Sports', 'Cooking']));
+console.log(countAndDescribe([]));

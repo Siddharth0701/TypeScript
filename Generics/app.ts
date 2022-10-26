@@ -29,4 +29,27 @@ console.log(mergeObj);
 
 //mergeObj.age;
 
+//Another generic function
+interface Lengthy{
+    length:number 
+
+}
+function countAndDescribe<T extends Lengthy>(element:T):[T,string] {
+    let descriptionText='Got no value';
+    if(element.length === 1){
+        descriptionText='Got 1 elements.';
+    }
+    else if(element.length>1){
+        descriptionText ='Got'+element.length+ 'element';
+    }
+    return [element, descriptionText]
+    
+}
+
+console.log( countAndDescribe('Hi there!'));
+console.log(countAndDescribe(['Sports','Cooking']));
+console.log(countAndDescribe([]));
+
+
+
 
