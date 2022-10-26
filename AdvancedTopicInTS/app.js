@@ -26,6 +26,11 @@ const fetchedUserData = {
 // console.log(fetchedUserData.job.title);
 //    console.log(fetchedUserData.job && fetchedUserData.job.title);
 console.log(fetchedUserData === null || fetchedUserData === void 0 ? void 0 : fetchedUserData.job.title); //Chaining operator
+//Nullish  Coalescig
+// const userinput1=undefined    ;
+const userinput1 = '';
+const storeData = userinput1 !== null && userinput1 !== void 0 ? userinput1 : 'DEFAULT';
+console.log(storeData);
 // type UnknownEmployee =Employe | Admin;
 // function printEmployeeInformation(emp:UnknownEmployee) {
 //     console.log('Name'+emp.name);

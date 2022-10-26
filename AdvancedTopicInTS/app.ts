@@ -56,6 +56,15 @@ const result=add2('Max','Singh')     //as string
    
 //    console.log(fetchedUserData.job && fetchedUserData.job.title);
 console.log(fetchedUserData?.job.title); //Chaining operator
+
+//Nullish  Coalescig
+
+// const userinput1=undefined    ;
+const userinput1=''   ;
+const storeData=userinput1 ?? 'DEFAULT';
+console.log(storeData);
+
+
    
    
 
