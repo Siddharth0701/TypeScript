@@ -60,10 +60,15 @@ textStorage.addItem('Siddharth');
 textStorage.removeItem('Singh');
 console.log(textStorage.getItems());
 const numberStorage = new dataStorage();
-// const objStorage =new dataStorage<object>();
-// const maxObj={name:'Siddharth'}
-// objStorage.addItem(maxObj)
-// objStorage.addItem({name:'Singh'})
-// //...
-// objStorage.removeItem(maxObj);
-// console.log(objStorage.getItems());
+function createCourseGoal(title, description, date) {
+    //return { title:title ,description:description,completeUntil:date};
+    let courseGoal = {};
+    courseGoal.title = title;
+    courseGoal.description = description;
+    courseGoal.completeUntil = date;
+    return courseGoal;
+}
+const names = ['Max', 'Anna'];
+//names.push('manu')
+//names.pop()
+console.log(names);
