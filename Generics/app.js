@@ -17,5 +17,5 @@ function merge(objA, objB) {
 //console.log(merge({name:'Max'},{age:21}));
 const mergeObj = merge({ name: 'Siddharth', hobbies: ['Sports'] }, { age: 21 }); //as {name:string,age:number}
 const mergeObj2 = merge({ name: 'Siddharth' }, { age: 21 }); //as {name:string,age:number}
-console.log(mergeObj.age);
+console.log(mergeObj);
 //mergeObj.age;
