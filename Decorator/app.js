@@ -41,3 +41,28 @@ PersonSingh = __decorate([
 ], PersonSingh);
 const pers = new PersonSingh();
 console.log(pers);
+//..............................................................................................................
+function Log(target, propertyName) {
+    console.log('Property decorator !');
+    console.log(target, propertyName);
+}
+class Product {
+    constructor(t, p) {
+        this.title = t;
+        this._price = p;
+    }
+    set price(val) {
+        if (val > 0) {
+            this._price = val;
+        }
+        else {
+            throw new Error('Invalid price -should be positive!');
+        }
+    }
+    getPriceWithtax(tax) {
+        return this._price * (1 + tax);
+    }
+}
+__decorate([
+    Log //property decorator
+], Product.prototype, "title", void 0);
