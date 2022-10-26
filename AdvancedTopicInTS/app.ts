@@ -19,6 +19,14 @@ type Numeric =number | boolean;
 type Universal=Combinable & Numeric
 
 //More On Type Guards
+
+//Function Overloading
+
+function add2(a:number, b:number):number ;
+function add2(a:string,b:string):string ;
+function add2(a:string,b:number):string;
+function add2(a:number,b:number):string;
+
 function add2(a:Combinable, b:Combinable) {
     if( typeof a=== 'string' || typeof b === 'string'){
         return a.toString() + b.toString();
@@ -27,50 +35,68 @@ function add2(a:Combinable, b:Combinable) {
     return a +b;
     
 }
-type UnknownEmployee =Employe | Admin;
-function printEmployeeInformation(emp:UnknownEmployee) {
-    console.log('Name'+emp.name);
-    if('privileges' in emp ){
-        console.log('Privillage:'+emp.privileges);
+const result=add2('Max','Singh')     //as string
+  console.log(
+   result.split(''));
 
-    }
-    if('startDate' in emp){
-        console.log('Privillage:'+emp.startDate);
+   const result1=add2('Singh',1)
+   console.log(result1);
+   
+   
+
+
+
+  
+    
+    
+
+
+
+   
+// type UnknownEmployee =Employe | Admin;
+// function printEmployeeInformation(emp:UnknownEmployee) {
+//     console.log('Name'+emp.name);
+//     if('privileges' in emp ){
+//         console.log('Privillage:'+emp.privileges);
+
+//     }
+//     if('startDate' in emp){
+//         console.log('Privillage:'+emp.startDate);
         
-    }
+//     }
    
     
     
-}
-printEmployeeInformation({name:'Manu', startDate:new Date()});
-class Car{
-    drive(){
-        console.log('Driving...');
+// }
+// printEmployeeInformation({name:'Manu', startDate:new Date()});
+// class Car{
+//     drive(){
+//         console.log('Driving...');
         
-    }
-}
+//     }
+// }
 
-class Truck{
-    drive(){
-    console.log("Driving a truck...");
-    }
-    loadCargo(amount:number){
-        console.log('loading cargo ...'+amount);
+// class Truck{
+//     drive(){
+//     console.log("Driving a truck...");
+//     }
+//     loadCargo(amount:number){
+//         console.log('loading cargo ...'+amount);
     
-    }
-}
-type Vehicle= Car | Truck;
-const v1=new Car();
-const v2=new Truck();
-function useVehicle(vehicle:Vehicle) {
-    vehicle.drive();
-    // if('loadCargo' in vehicle){
-    //     vehicle.loadCargo(1000);
-    // }    
-    if(vehicle instanceof Truck){
-        vehicle.loadCargo(1000);
-    }    
-}
-useVehicle(v1);
-useVehicle(v2);
+//     }
+// }
+// type Vehicle= Car | Truck;
+// const v1=new Car();
+// const v2=new Truck();
+// function useVehicle(vehicle:Vehicle) {
+//     vehicle.drive();
+//     // if('loadCargo' in vehicle){
+//     //     vehicle.loadCargo(1000);
+//     // }    
+//     if(vehicle instanceof Truck){
+//         vehicle.loadCargo(1000);
+//     }    
+// }
+// useVehicle(v1);
+// useVehicle(v2);
 
