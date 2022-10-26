@@ -42,6 +42,21 @@ const result=add2('Max','Singh')     //as string
    const result1=add2('Singh',1)
    console.log(result1);
    
+   const fetchedUserData={
+    id:'u1',
+    name:'Max',
+    job:{
+        title:'CEO',
+        description:'My own Company'
+    }
+
+   };
+   //Optional Chanining
+  // console.log(fetchedUserData.job.title);
+   
+//    console.log(fetchedUserData.job && fetchedUserData.job.title);
+console.log(fetchedUserData?.job.title); //Chaining operator
+   
    
 
 

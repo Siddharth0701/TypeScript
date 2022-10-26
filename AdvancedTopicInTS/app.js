@@ -14,6 +14,18 @@ const result = add2('Max', 'Singh'); //as string
 console.log(result.split(''));
 const result1 = add2('Singh', 1);
 console.log(result1);
+const fetchedUserData = {
+    id: 'u1',
+    name: 'Max',
+    job: {
+        title: 'CEO',
+        description: 'My own Company'
+    }
+};
+//Optional Chanining
+// console.log(fetchedUserData.job.title);
+//    console.log(fetchedUserData.job && fetchedUserData.job.title);
+console.log(fetchedUserData === null || fetchedUserData === void 0 ? void 0 : fetchedUserData.job.title); //Chaining operator
 // type UnknownEmployee =Employe | Admin;
 // function printEmployeeInformation(emp:UnknownEmployee) {
 //     console.log('Name'+emp.name);
