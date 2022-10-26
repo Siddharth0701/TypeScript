@@ -8,12 +8,24 @@ function Logger(LogString:string ) {
         console.log(LogString);
         console.log(constructor);
         
+    }   
+}
+
+function WithTemplate(template:string,hookid:string) {
+    return function(constructor: any){
+        const hookEl=document.getElementById(hookid);
+        const p=new constructor();
+        if(hookEl){
+            hookEl.innerHTML=template;
+            hookEl.querySelector('h1')! .textContent=p.name ;
+
+        }
+
     }
     
-   
-    
 }
-@Logger('LOGGING -PERSONSINGH')
+//@Logger('LOGGING -PERSONSINGH')
+@WithTemplate('<h1> My PersonSingh Object </h1>','app')
 class PersonSingh{
     name='Singh';
 
