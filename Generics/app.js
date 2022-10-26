@@ -31,3 +31,8 @@ function countAndDescribe(element) {
 console.log(countAndDescribe('Hi there!'));
 console.log(countAndDescribe(['Sports', 'Cooking']));
 console.log(countAndDescribe([]));
+// Keyof constraint
+function extractAndConvert(obj, key) {
+    return 'Value:' + obj[key];
+}
+console.log(extractAndConvert({ name: 'Max' }, 'name'));
