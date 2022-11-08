@@ -7,7 +7,7 @@ function App() {
   const [todos,setTodo]= useState<Todo[]>([]);
   const todoAddhandeler=(text:string)=>{
   //  console.log(text);
-  setTodo([{id:Math.random().toString(),text:text}]);
+  setTodo( prevTodos=>[...prevTodos,{id:Math.random().toString(),text:text}]);
     
   };
   return (
