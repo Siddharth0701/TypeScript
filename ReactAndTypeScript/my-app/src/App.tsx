@@ -10,11 +10,16 @@ function App() {
   setTodo( prevTodos=>[...prevTodos,{id:Math.random().toString(),text:text}]);
     
   };
+  const todoDeleteHandeler=(todoId:string)=>{
+    setTodo(prevTodos=>{
+      return prevTodos.filter(todo=>todo.id!==todoId);
+    });
+  };
   return (
     <div className="App">
       {/* A component that adds */}
       <NewTodo onAddTodo={todoAddhandeler}/>
-      <TodoList items={todos}/>
+      <TodoList items={todos} onDeleteTodo={todoDeleteHandeler}/>
     </div>
   );
 }
