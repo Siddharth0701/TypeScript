@@ -1,4 +1,5 @@
 import React from "react";
+import './TodoList.css';
 interface TodoListprops{
 items:{id:string,text:string} [];
 onDeleteTodo:(id:string) =>void
