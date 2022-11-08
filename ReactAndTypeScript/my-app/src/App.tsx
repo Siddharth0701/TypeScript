@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 import TodoList from './components/TodoList';
 import NewTodo from './components/NewTodo';
-import {Todo} from  './todo.model'
+import {Todo} from  './todo.model';
+//import {Route,BrowserRouter} from 'react-router-dom';
 function App() {
   // const todos=[{id:'t1',text:'Finish to course'}];
   const [todos,setTodo]= useState<Todo[]>([]);
